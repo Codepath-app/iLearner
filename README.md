@@ -98,7 +98,8 @@ Original App Design Project - README Template
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://github.com/Codepath-app/iLearner/blob/main/IMG-20210403-WA0008.jpg>
+<img src="https://github.com/Codepath-app/iLearner/blob/main/IMG-20210403-WA0008.jpg"
+        
 
 ### [BONUS] Digital Wireframes & Mockups
 
