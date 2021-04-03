@@ -1,4 +1,4 @@
-# iLearner
+# weaScholars
 Original App Design Project - README Template
 ===
 
