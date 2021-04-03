@@ -72,13 +72,9 @@ Original App Design Project - README Template
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
-[fill out your first tab]
 * timeline stream
-* [fill out your second tab]
 * course selection stream
-* [fill out your third tab]
 * user profile
-* [fill out your fourth tab]
 * chat groups
 
 **Flow Navigation** (Screen to Screen)
