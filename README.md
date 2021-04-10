@@ -112,26 +112,44 @@ Original App Design Project - README Template
 
 ### Models
 
-#### Post
+#### User/Instructor
 
     | Property      | Type     | Description |
-   | ------------- | -------- | ------------|
-   | email         | String   | unique id for the user post (default field) |
-   | first_name    | String   | first name of user |
-   | last_name     | String   | last name of user  |
+    | ------------- | -------- | ------------|
+    | email         | String   | unique id for the user post (default field) |
+    | first_name    | String   | first name of user |
+    | last_name     | String   | last name of user  |
+    
+#### User/Student
+
+    | Property      | Type     | Description |
+    | ------------- | -------- | ------------|
+    | email         | String   | unique id for the user post (default field) |
+    | first_name    | String   | first name of user |
+    | last_name     | String   | last name of user  |
+    
+ #### Course
+
+    | Property      | Type     | Description |
+    | ------------- | -------- | ------------|
+    | name         | String   | name of course |
+    | code    | int/string  | course leve code |
+    | instructor     | pointer   | reference to instructor  |
+    | schedule     | Map   | day and time of class  |
    
 ### Networking
 
 #### List of network requests by screen
+
    -  Api rules
       - (Access Control) This allows anybody to read and post from the database. No authentications required for now.
       ```json
         rules_version = '2';
         service cloud.firestore {
-            match /databases/{database}/documents {
-                match /{document=**} {
-                    allow read, write: if
-                    request.time < timestamp.date(2021, 5, 6);
+          match /databases/{database}/documents {
+             match /{document=**} {
+               allow read, write: if
+                  request.time < timestamp.date(2021, 5, 6);
                 }
             }
         }
