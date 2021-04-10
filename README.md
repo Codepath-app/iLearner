@@ -2,9 +2,12 @@
 
 ## Table of Contents
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
+2. [Product Spec](#Product-Spec)
+3. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
+4. [Issues](#Issues)
+5. [Projects](#Porjects)
+6. [Milestones](#Milestones)
 
 ## Overview
 ### Description
@@ -212,13 +215,15 @@
 ##### Project Repo url
 - [https://github.com/Codepath-app/WeeLearn](https://github.com/Codepath-app/WeeLearn)
 
-#### Issues
+
+
+##Issues
 - [https://github.com/Codepath-app/WeeLearn/issues](https://github.com/Codepath-app/WeeLearn/issues)
 
-### Projects
+## Projects
 - [https://github.com/Codepath-app/WeeLearn/projects/1](https://github.com/Codepath-app/WeeLearn/projects/1)
 
-### Milestone
+## Milestone
 - [https://github.com/Codepath-app/WeeLearn/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22The+Looks%22](https://github.com/Codepath-app/WeeLearn/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22The+Looks%22)
 - [https://github.com/Codepath-app/WeeLearn/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Api+up+and+running%22](https://github.com/Codepath-app/WeeLearn/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Api+up+and+running%22)
 
