@@ -107,11 +107,91 @@ Original App Design Project - README Template
 
 ### [BONUS] Interactive Prototype
 
+
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
+#### Post
+
+    | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | email         | String   | unique id for the user post (default field) |
+   | first_name    | String   | first name of user |
+   | last_name     | String   | last name of user  |
+   
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+#### List of network requests by screen
+   -  Api rules
+      - (Access Control) This allows anybody to read and post from the database. No authentications required for now.
+      ```json
+        rules_version = '2';
+        service cloud.firestore {
+            match /databases/{database}/documents {
+                match /{document=**} {
+                    allow read, write: if
+                    request.time < timestamp.date(2021, 5, 6);
+                }
+            }
+        }
+      ```
+   -  Instructor Class 
+  
+      - (Read/GET) This is the call to the api to retrieve data from firebasefirestore real-time database (instructor data only)
+         ```java
+        public LinkedList<Map<String, Object>> read()
+        {
+        //This the api call made to the user collection on the cloud real-time database
+        db.collection("user").document("WoW4mXdA8bBB0SHAgwdW").collection("instructor")
+                .get()
+                .addOnCompleteListener(task -> {
+                    LinkedList<Map<String,Object> > list = new LinkedList<>();
+                    if (task.isSuccessful()) {
+                        //This for loop is used to retrieve data. Instead of getting the whole chunk of data
+                        //we can get indivual snapshots at a time and manipulate it as we please.
+                        for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
+                            //This log statement is there to help us debug.
+                            //document.getdata() is the key function that returns a map instance of the information stored on the cloud
+                            Log.d(TAG, document.getId() + " => " + document.getData().toString());
+                            //while the loop is running and retrieving data, we are pushing each instance into a local linked list
+                            list.add(document.getData()); } }
+                    else {
+                        Log.w(TAG, "Error getting documents.", task.getException()); }
+                    //This is there for debuggin purposes.
+                    //We basically coping the local linked list into a global element.
+                    instructors.addAll(list); });
+                //The global linkedlist is then returned
+         return instructors;
+
+        }
+         ```
+      - (Create/POST) Create a new instructor
+        ```java
+            public void write(Instructor inst) {
+                // Create a new instructor
+                Map<String, String> instructor = new HashMap<>();
+                instructor.put("first_name", inst.getFirst_name());
+                instructor.put("last_name", inst.getLast_name());
+                instructor.put("email", inst.getEmail());
+                instructor.put("profile_picture", inst.getProfile_picture());
+                // Add a new document with a generated ID
+                db.collection("user").document("WoW4mXdA8bBB0SHAgwdW").collection("instructor")
+                    .add(instructor) //this is the point where we add the map to the database
+                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {                    
+                        @Override
+                        public void onSuccess(DocumentReference documentReference) {
+                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId()); }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.w(TAG, "Error adding document", e);
+                        }
+                    });
+                }
+        ```
+#### [OPTIONAL:] Existing API Endpoints
+##### Google Firebase
+- Base URL - [https://console.firebase.google.com](https://console.firebase.google.com)
+
