@@ -128,10 +128,10 @@
 
     | Property      | Type     | Description |
     | ------------- | -------- | ------------|
-    | name         | String   | name of course |
-    | code    | int/string  | course leve code |
-    | instructor     | pointer   | reference to instructor  |
-    | schedule     | Map   | day and time of class  |
+    | name          | String   | name of course |
+    | code          | String   | course leve code |
+    | instructor    | Pointer  | reference to instructor  |
+    | schedule      | Map      | day and time of class  |
    
 ### Networking
 
