@@ -1,7 +1,3 @@
-# WeeLearn
-Original App Design Project - README Template
-===
-
 # Wee-learn
 
 ## Table of Contents
