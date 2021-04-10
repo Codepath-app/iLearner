@@ -209,3 +209,6 @@
 ##### Google Firebase
 - Base URL - [https://console.firebase.google.com](https://console.firebase.google.com)
 
+##### Project Repo url
+- [https://github.com/Codepath-app/WeeLearn](https://github.com/Codepath-app/WeeLearn)
+
