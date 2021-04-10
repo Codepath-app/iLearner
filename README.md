@@ -217,7 +217,7 @@
 
 
 
-##Issues
+## Issues
 - [https://github.com/Codepath-app/WeeLearn/issues](https://github.com/Codepath-app/WeeLearn/issues)
 
 ## Projects
