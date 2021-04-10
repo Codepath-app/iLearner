@@ -216,8 +216,9 @@
 - [https://github.com/Codepath-app/WeeLearn/issues](https://github.com/Codepath-app/WeeLearn/issues)
 
 ### Projects
-- []()
+- [https://github.com/Codepath-app/WeeLearn/projects/1](https://github.com/Codepath-app/WeeLearn/projects/1)
 
 ### Milestone
-- []()
+- [https://github.com/Codepath-app/WeeLearn/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22The+Looks%22](https://github.com/Codepath-app/WeeLearn/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22The+Looks%22)
+- [https://github.com/Codepath-app/WeeLearn/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Api+up+and+running%22](https://github.com/Codepath-app/WeeLearn/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Api+up+and+running%22)
 
