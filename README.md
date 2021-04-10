@@ -1,4 +1,4 @@
-# weaScholars
+# WeeLearn
 Original App Design Project - README Template
 ===
 
