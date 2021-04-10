@@ -212,3 +212,6 @@
 ##### Project Repo url
 - [https://github.com/Codepath-app/WeeLearn](https://github.com/Codepath-app/WeeLearn)
 
+#### Issues
+- [https://github.com/Codepath-app/WeeLearn/issues](https://github.com/Codepath-app/WeeLearn/issues)
+
