@@ -38,7 +38,7 @@
 
 **Required Must-have Stories**
 
-* login
+* login [completed]
 * profile view
 * view posts
 * submit posts
